@@ -1,7 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import * as Blockly from 'blockly/core'
 import 'blockly/blocks'
-import defaultToolbox from './toolbox'
 
 interface Props extends Blockly.BlocklyOptions {
   /** HTML id attribute for the blockly Div element. */
@@ -41,13 +40,7 @@ const BlocklyComponent = ({
     // Import locale messages then initialize workspace with given options.
     import(`blockly/msg/${locale || 'en'}`).then((module) => {
       Blockly.setLocale(module.default)
-      if (ref.current)
-        setWorkspace(
-          Blockly.inject(ref.current, {
-            toolbox: defaultToolbox,
-            ...blocklyOptions
-          })
-        )
+      if (ref.current) setWorkspace(Blockly.inject(ref.current, blocklyOptions))
     })
   }, [])
 
@@ -56,9 +49,8 @@ const BlocklyComponent = ({
     if (initialXml && workspace)
       Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(initialXml), workspace)
     // Listen to workspace changes.
-    if (workspace && onWorkspaceChange) {
+    if (workspace && onWorkspaceChange)
       workspace.addChangeListener(changeListener)
-    }
     return () => workspace?.removeChangeListener(changeListener)
   }, [workspace])
 
