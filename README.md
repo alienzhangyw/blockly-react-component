@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/blockly-react-component.svg)](https://www.npmjs.com/package/blockly-react-component) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+> Created with [create-react-library](https://github.com/transitive-bullshit/create-react-library).
+
 ## Install
 
 ```bash

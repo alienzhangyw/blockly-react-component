@@ -1,6 +1,6 @@
 import BlocklyComponent from '.'
 
-describe('ExampleComponent', () => {
+describe('BlocklyComponent', () => {
   it('is truthy', () => {
     expect(BlocklyComponent).toBeTruthy()
   })
