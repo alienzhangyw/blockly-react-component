@@ -1,6 +1,6 @@
 {
   "name": "blockly-react-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component that embeds a Blockly visual programming editor.",
   "author": "alienzhangyw <alienzhangyw@live.cn>",
   "homepage": "https://github.com/alienzhangyw/blockly-react-component#readme",
@@ -31,6 +31,9 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
+  },
+  "dependencies": {
+    "blockly": "^5.20210325.1"
   },
   "peerDependencies": {
     "blockly": "^5.20210325.1",
