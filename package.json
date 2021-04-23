@@ -2,7 +2,11 @@
   "name": "blockly-react-component",
   "version": "1.0.0",
   "description": "A React component that embeds a Blockly visual programming editor.",
-  "author": "alienzhangyw",
+  "author": "alienzhangyw <alienzhangyw@live.cn>",
+  "homepage": "https://github.com/alienzhangyw/blockly-react-component#readme",
+  "bugs": {
+    "url": "https://github.com/alienzhangyw/blockly-react-component/issues"
+  },
   "license": "MIT",
   "repository": "alienzhangyw/blockly-react-component",
   "main": "dist/index.js",
@@ -11,20 +15,26 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "blockly",
+    "react",
+    "react component"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
-    "test:lint": "eslint .",
+    "test:lint": "eslint src/** example/src/**",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "blockly": "^5.20210325.1",
+    "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -36,7 +46,6 @@
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -50,6 +59,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
