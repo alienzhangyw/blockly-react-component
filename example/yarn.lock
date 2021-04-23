@@ -2517,6 +2517,10 @@ bindings@^1.5.0:
   version "0.0.0"
   uid ""
 
+blockly@^5.20210325.1:
+  version "0.0.0"
+  uid ""
+
 "blockly@link:../node_modules/blockly":
   version "0.0.0"
   uid ""
