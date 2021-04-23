@@ -43,6 +43,12 @@ class Example extends Component {
 | onWorkspaceChange | `(workspace?: Blockly.WorkspaceSvg) => void` | Do something when blockly workspace content changes. |
 | ...blocklyOptions | any of `Blockly.BlocklyOptions` | Options for the blockly injection. See https://developers.google.com/blockly/guides/configure/web/configuration_struct for available options. *If 'toolbox' is not set, it will be a standard toolbox of native blockly blocks by default.* |
 
+## Example
+
+See the code on [example/src/App.tsx](https://github.com/alienzhangyw/blockly-react-component/blob/main/example/src/App.tsx)
+
+[Example Page](https://alienzhangyw.github.io/blockly-react-component/)
+
 ## License
 
 MIT © [alienzhangyw](https://github.com/alienzhangyw)
